@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /inSale HTTP/1.1" 200 29866 http-bio-8080-exec-1 2123
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /bootstrap/css/bootstrap.css HTTP/1.1" 404 1005 http-bio-8080-exec-2 17
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /css/public.css HTTP/1.1" 304 - http-bio-8080-exec-4 19
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /css/base_good_manager.css HTTP/1.1" 304 - http-bio-8080-exec-5 11
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /css/magic-check.css HTTP/1.1" 304 - http-bio-8080-exec-3 6
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /images/base.png HTTP/1.1" 304 - http-bio-8080-exec-8 44
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:18:29:25 +0800] "GET /images/zhuisuxinxitip.png HTTP/1.1" 304 - http-bio-8080-exec-6 19

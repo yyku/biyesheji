@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yukun.mapper.LdwUnitMapper" >
+  <resultMap id="BaseResultMap" type="com.yukun.pojo.LdwUnit" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="unit_type_id" property="unitTypeId" jdbcType="BIGINT" />
+    <result column="unit_name" property="unitName" jdbcType="VARCHAR" />
+    <result column="unit_explain" property="unitExplain" jdbcType="VARCHAR" />
+    <result column="is_standard_unit" property="isStandardUnit" jdbcType="BIT" />
+    <result column="ratio" property="ratio" jdbcType="DECIMAL" />
+    <result column="is_delete" property="isDelete" jdbcType="TINYINT" />
+    <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
+    <result column="update_user_id" property="updateUserId" jdbcType="BIGINT" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="unit_logo" property="unitLogo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, unit_type_id, unit_name, unit_explain, is_standard_unit, ratio, is_delete, create_user_id, 
+    update_user_id, create_date, update_date, unit_logo
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yukun.pojo.LdwUnitExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ldw_unit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from ldw_unit
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from ldw_unit
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yukun.pojo.LdwUnitExample" >
+    delete from ldw_unit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yukun.pojo.LdwUnit" >
+    insert into ldw_unit (id, unit_type_id, unit_name, 
+      unit_explain, is_standard_unit, ratio, 
+      is_delete, create_user_id, update_user_id, 
+      create_date, update_date, unit_logo
+      )
+    values (#{id,jdbcType=BIGINT}, #{unitTypeId,jdbcType=BIGINT}, #{unitName,jdbcType=VARCHAR}, 
+      #{unitExplain,jdbcType=VARCHAR}, #{isStandardUnit,jdbcType=BIT}, #{ratio,jdbcType=DECIMAL}, 
+      #{isDelete,jdbcType=TINYINT}, #{createUserId,jdbcType=BIGINT}, #{updateUserId,jdbcType=BIGINT}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP}, #{unitLogo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yukun.pojo.LdwUnit" >
+    insert into ldw_unit
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="unitTypeId != null" >
+        unit_type_id,
+      </if>
+      <if test="unitName != null" >
+        unit_name,
+      </if>
+      <if test="unitExplain != null" >
+        unit_explain,
+      </if>
+      <if test="isStandardUnit != null" >
+        is_standard_unit,
+      </if>
+      <if test="ratio != null" >
+        ratio,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="createUserId != null" >
+        create_user_id,
+      </if>
+      <if test="updateUserId != null" >
+        update_user_id,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
+      <if test="unitLogo != null" >
+        unit_logo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="unitTypeId != null" >
+        #{unitTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="unitName != null" >
+        #{unitName,jdbcType=VARCHAR},
+      </if>
+      <if test="unitExplain != null" >
+        #{unitExplain,jdbcType=VARCHAR},
+      </if>
+      <if test="isStandardUnit != null" >
+        #{isStandardUnit,jdbcType=BIT},
+      </if>
+      <if test="ratio != null" >
+        #{ratio,jdbcType=DECIMAL},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="createUserId != null" >
+        #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="unitLogo != null" >
+        #{unitLogo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yukun.pojo.LdwUnitExample" resultType="java.lang.Integer" >
+    select count(*) from ldw_unit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ldw_unit
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.unitTypeId != null" >
+        unit_type_id = #{record.unitTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="record.unitName != null" >
+        unit_name = #{record.unitName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitExplain != null" >
+        unit_explain = #{record.unitExplain,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isStandardUnit != null" >
+        is_standard_unit = #{record.isStandardUnit,jdbcType=BIT},
+      </if>
+      <if test="record.ratio != null" >
+        ratio = #{record.ratio,jdbcType=DECIMAL},
+      </if>
+      <if test="record.isDelete != null" >
+        is_delete = #{record.isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="record.createUserId != null" >
+        create_user_id = #{record.createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.updateUserId != null" >
+        update_user_id = #{record.updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.createDate != null" >
+        create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateDate != null" >
+        update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.unitLogo != null" >
+        unit_logo = #{record.unitLogo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ldw_unit
+    set id = #{record.id,jdbcType=BIGINT},
+      unit_type_id = #{record.unitTypeId,jdbcType=BIGINT},
+      unit_name = #{record.unitName,jdbcType=VARCHAR},
+      unit_explain = #{record.unitExplain,jdbcType=VARCHAR},
+      is_standard_unit = #{record.isStandardUnit,jdbcType=BIT},
+      ratio = #{record.ratio,jdbcType=DECIMAL},
+      is_delete = #{record.isDelete,jdbcType=TINYINT},
+      create_user_id = #{record.createUserId,jdbcType=BIGINT},
+      update_user_id = #{record.updateUserId,jdbcType=BIGINT},
+      create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      unit_logo = #{record.unitLogo,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yukun.pojo.LdwUnit" >
+    update ldw_unit
+    <set >
+      <if test="unitTypeId != null" >
+        unit_type_id = #{unitTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="unitName != null" >
+        unit_name = #{unitName,jdbcType=VARCHAR},
+      </if>
+      <if test="unitExplain != null" >
+        unit_explain = #{unitExplain,jdbcType=VARCHAR},
+      </if>
+      <if test="isStandardUnit != null" >
+        is_standard_unit = #{isStandardUnit,jdbcType=BIT},
+      </if>
+      <if test="ratio != null" >
+        ratio = #{ratio,jdbcType=DECIMAL},
+      </if>
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="createUserId != null" >
+        create_user_id = #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null" >
+        update_user_id = #{updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="unitLogo != null" >
+        unit_logo = #{unitLogo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yukun.pojo.LdwUnit" >
+    update ldw_unit
+    set unit_type_id = #{unitTypeId,jdbcType=BIGINT},
+      unit_name = #{unitName,jdbcType=VARCHAR},
+      unit_explain = #{unitExplain,jdbcType=VARCHAR},
+      is_standard_unit = #{isStandardUnit,jdbcType=BIT},
+      ratio = #{ratio,jdbcType=DECIMAL},
+      is_delete = #{isDelete,jdbcType=TINYINT},
+      create_user_id = #{createUserId,jdbcType=BIGINT},
+      update_user_id = #{updateUserId,jdbcType=BIGINT},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      unit_logo = #{unitLogo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectProductLeverType" resultMap="BaseResultMap">
+   SELECT * FROM Ldw_Unit WHERE is_delete = 0 and unit_type_id = #{typeId} ORDER BY update_date desc
+  </select>
+  
+</mapper>

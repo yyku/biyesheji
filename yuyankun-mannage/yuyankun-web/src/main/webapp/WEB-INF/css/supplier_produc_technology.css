@@ -1,0 +1,180 @@
+.path{
+
+}
+.line{
+    position: static;
+    margin:auto;
+    transform: translate(0);
+}
+.path .w{
+    padding: 15px 13px;
+    overflow: hidden;
+}
+.path .w li{
+    float: left;
+    font-size: 12px;
+
+}
+.path .w li a{
+    color: #a6a6a6;
+}
+.path .w li:hover a{
+    text-decoration: underline;
+}
+.mian .w{
+    height: 517px;
+    /*overflow: hidden;*/
+}
+.songyang_imgBox{
+    float: left;
+    position: relative;
+}
+.songyang_imgBox::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    top: -5px;
+    left: -5px;
+    background: url(../images/nongyejishu.png) no-repeat;
+
+}
+.formBox{
+    width: 350px;
+    height: 514px;
+    background: #fff;
+}
+.formBox >form{
+    padding: 42px 44px 25px 0px;
+}
+.formBox >form .col-sm-4,.formBox >form .col-sm-8{
+    padding-left: 0;
+}
+.formBox >form .control-label{
+    text-align: right;
+    margin-top: 7px;
+    color: #888685;
+}
+.formBox >form  .form-group{
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+.sqBtnBox{
+    /*padding-top: 100px;*/
+}
+.sqBtn,.sqBtn:hover,.sqBtn:focus,.sqBtn:active{
+    width: 100%;
+    color: #fff;
+    background-color: #10c55b;
+    border: 1px solid #008842;
+    font-size: 16px;
+}
+.tipBox{
+    color: #aeaeae;
+}
+.tipBox i{
+    font-style: normal;
+    color: red;
+}
+.tipBox em{
+    color: #10c55b;
+}
+
+
+/*流程开始*/
+.pro_baoxian_process{
+    margin-top: 40px;
+
+}
+.pro_baoxian_process .w{
+    background-color: #fff;
+    color: #000000;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+.sample_requirements{
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.sample_requirements_tit{
+    width: 420px;
+    margin-left:50%;
+    transform: translate(-50%);
+    display: flex;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.nong_technology{
+    width: 220px;
+}
+.new_equipment{
+    width: 330px;
+}
+.sample_requirements_tit span{
+    flex: 1;
+}
+.sample_requirements_tit span.con{
+    flex:3;
+    text-align: center;
+}
+.lines{
+    border: 1px solid #000;
+    margin: auto 0;
+    height: 0;
+}
+.sample_img{
+    padding: 0 170px;
+}
+.sample_liucheng{
+    padding-bottom: 50px;
+}
+
+.form-control{
+    border-radius: 4px!important;
+}
+
+.sqBtn,.sqBtn:hover,.sqBtn:focus,.sqBtn:active{
+    border-radius: 4px!important;
+}
+
+.must_write{
+    color: red;
+}
+/*流程结束*/
+/*成功模态框开始*/
+.chenggong{
+    width: 600px;
+}
+.chenggong >.modal-dialog{
+    margin:0;
+}
+.m-header {
+    margin-bottom: 0 !important;
+}
+button.modalBtn,button.modalBtn:hover,button.modalBtn:focus,button.modalBtn:active{
+    width: 28px;
+    height: 28px;
+    line-height: 27px;
+    border-radius: 50% !important;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    text-indent: 0px;
+    background-image: none!important;
+    background-color: #000!important;
+}
+.m-body {
+    text-align: center;
+}
+.foter {
+    margin-top: 0;
+    text-align: center;
+}
+.sureBtn{
+    width: 160px;
+    height: 45px;
+    color: #fff;
+    background-color: #008842;
+}
+/*成功模态框结束*/

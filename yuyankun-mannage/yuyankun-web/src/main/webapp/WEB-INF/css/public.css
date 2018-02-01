@@ -1,0 +1,810 @@
+    html,body,ul,li,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+a:hover{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+em{
+    font-style: normal;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.w{
+    width: 1190px;
+    margin:auto;
+}
+body{
+    /*background-color: #f4f4f4;*/
+    font-family: '微软雅黑';
+}
+.clear{
+    clear: both;
+}
+
+/*topBar开始*/
+.heaer-box{
+    width: 100%;
+    height: 30px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+.heaer-box .w{
+    height: 30px;
+    color: #999;
+    font-size: 12px;
+    line-height: 30px;
+    /*background-color: yellow;*/
+}
+.topBar ul li{
+    float: left;
+}
+.topLef li{
+    margin-right: 25px;
+}
+.fw-num{
+    color: #000;
+}
+.topRig li{
+    margin-right: 15px;
+    font-size: 12px;
+}
+.topRig li a{
+    color: #969696;
+}
+.caigoukuang{
+    height: 15px;
+}
+    .purchaseBox{
+        display: inline-block;
+        position: relative;
+    }
+
+    .tabPurchase{
+        display: none;
+        text-align: center;
+        position: absolute;
+        /*bottom: -90px;*/
+        left: -10px;
+        z-index: 1001;
+        /*color: #008842;*/
+        background-color: #fff;
+        border-radius: 5px!important;
+    }
+
+    .purchaseBox .tabPurchase > a{
+        display: block;
+        min-width: 70px;
+        color: #008842;
+    }
+.purchase{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    width: 42px;
+    color: #fff;
+    border-radius: 8px!important;
+    background-color: #009757;
+}
+
+.open-mind{
+    display: inline-block;
+    padding: 0px 15px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #FF7A00;
+    border-radius: 8px!important;
+}
+.open-mind:hover{
+    background-color: #E0761A;
+}
+.lingdang{
+    vertical-align: middle;
+    color: #009757;
+    font-size: 16px;
+    position: relative;
+}
+.lingdang em{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px!important;
+    background-color: #fd3e3e;
+}
+/*topBar结束*/
+/*header开始*/
+.header{
+    display: block;
+    height: 120px;
+    background-color: #fff;
+}
+.header .w{
+
+    position: relative;
+}
+.logo-img{
+    position: absolute;
+    display: inline-block;
+    z-index: 2;
+}
+.logo_tit_lk{
+    display: block;
+    width: 225px;
+    height: 80px;
+    background-image: url('../images/lvduwa.png');
+    background-repeat: no-repeat;
+    text-indent: -999px;
+}
+.caigouduan{
+    display: block;
+    width: 47px;
+    height: 19px;
+    background-image: url('../images/caigou.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 11px;
+    right: -37px;
+}
+.gongyingshangtip{
+    display: block;
+    width: 47px;
+    height: 19px;
+    background-image: url('../images/gongyingshangtip.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 11px;
+    right: -36px;
+}
+.jididuanTip{
+    display: block;
+    width: 47px;
+    height: 19px;
+    background-image: url('../images/jididuanTip.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 11px;
+    right: -37px;
+}
+
+.search{
+    position: absolute;
+    top: 30px;
+    left: 288px;
+}
+.input-box{
+    width: 798px;
+    height: 40px;
+    line-height: 40px;
+}
+.inputBox{
+    margin-top: 3px;
+    width: 670px;
+    border:#008842 2px solid ;
+    color: #008842;
+    border-radius: 0!important;
+}
+.sousuoBtn button,.sousuoBtn button:link,.sousuoBtn button:visited,.sousuoBtn button:hover,.sousuoBtn button:active,.sousuoBtn button.active{
+    width: 125px;
+    background-color: #008842;
+    color: #fff;
+    border:#008842 1px solid ;
+    border-bottom:0;
+    font-size: 15px;
+}
+.fruits{
+    margin-left: -15px;
+    margin-top: 10px;
+}
+.fruits li{
+    float: left;
+    color: #008842;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.fruits li a{
+    color: #008842;
+}
+/*header结束*/
+/*navitems开始*/
+.navitems{
+    /*width: 1325px;*/
+    font-size: 18px;
+    margin:0 auto;
+    background-color: #fff;
+}
+.navitems .w{
+    width: 1190px;
+    position: relative;
+}
+.cateory{
+    display: inline-block;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    float: left;
+    text-align: center;
+}
+.goodsAssortmentUl{
+    position: relative;
+    z-index: 1000;
+}
+.tab-title{
+    display: inline-block;
+    width: 225px;
+    height: 35px;
+    line-height: 35px;
+    color:#fff;
+    z-index:1000;
+    background-color: #008842;
+}
+.instro-tab{
+    width: 225px;
+    position: absolute;
+    top: 36px;
+    z-index: 999;
+    display: none;
+}
+.instro-tab li{
+    background-color: #3ea600;
+    line-height: 55px;
+    /*position: relative;*/
+}
+.instro-tab li >a{
+    color: #fff;
+}
+.instro-tab > li > a::before{
+    color: #fff;
+    display: inline-block;
+    content: '';
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.ldw_menu{
+    display: none;
+    width: 585px;
+    min-height: 434px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 225px;
+    z-index: 999;
+    border: 1px solid #eee;
+}
+.good-part{
+    width: 100%;
+    margin-top: 25px;
+}
+.goods-detail{
+    padding: 10px 0 0 20px;
+}
+.goods-detail a:hover{
+    text-decoration: none;
+    color: #52ad26;
+}
+.goods-detail-item{
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 0;
+    /*border-bottom: 1px solid #bec5d0;*/
+}
+.goods-detail-tit{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 70px;
+    text-align: right;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.goods-detail-tit-lk{
+    font-size: 13px;
+    color: #606060;
+}
+.goods-detail-con{
+    overflow: hidden;
+    padding: 6px 0;
+    border-bottom: 1px solid #bec5d0;
+}
+.goods-detail-con-lk{
+    float: left;
+    margin: 4px 0;
+    padding: 0 10px;
+    height: 16px;
+    font-size: 13px;
+    border-left: 1px solid #e0e0e0;
+    line-height: 16px;
+    color: #757575;
+    white-space: nowrap;
+}
+/*good-part展示开始*/
+.shucai::before{
+    background: url("../images/luobo1.png");
+}
+.shuiguo::before{
+    background: url("../images/shuiguo1.png");
+}
+.jiaqin::before{
+    background: url("../images/ji1.png");
+}
+.haixian::before{
+    background: url("../images/yu1.png");
+}
+.sushi::before{
+    background: url("../images/sushi1.png");
+}
+.danlei::before{
+    background: url("../images/jidan1.png");
+}
+.ruzhipin::before{
+    background: url("../images/niunai1.png");
+}
+.roulei::before{
+    background: url("../images/rou1.png");
+}
+.instro-tab li:hover {
+    background-color: #fff;
+    line-height: 55px;
+}
+.instro-tab lifirst-child:hover {
+    border-top: 2px solid #008842;
+    background-color: #fff;
+    line-height: 55px;
+}
+.instro-tab li:hover >a{
+    color: #3ea600;
+}
+.instro-tab li:hover .shucai::before{
+    background: url("../images/luobo2.png");
+}
+.instro-tab li:hover .shuiguo::before{
+    background: url("../images/shuiguo2.png");
+}
+.instro-tab li:hover .jiaqin::before{
+    background: url("../images/ji2.png");
+}
+.instro-tab li:hover .haixian::before{
+    background: url("../images/yu2.png");
+}
+.instro-tab li:hover .sushi::before{
+    background: url("../images/sushi2.png");
+}
+.instro-tab li:hover .danlei::before{
+    background: url("../images/jidan2.png");
+}
+.instro-tab li:hover .ruzhipin::before{
+    background: url("../images/niunai2.png");
+}
+.instro-tab li:hover .roulei::before{
+    background: url("../images/rou2.png");
+}
+.tab{
+    display: inline-block;
+    float: left;
+    line-height: 35px;
+}
+.tab li{
+    /*width: 80px;*/
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    float: left;
+    font-weight:700;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.tab li.active a{
+    color: #008842;;
+}
+.zhaocaigou{
+    display: none;
+}
+.fahuopin:hover > .zhaocaigou{
+    position: relative;
+    z-index: 1001;
+    display: block;
+    background-color: #fff;
+
+}
+.line{
+    overflow: hidden;
+    display: block;
+    width: 1325px;
+    height: 2px;
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+    background-color: #008842;
+}
+/*navitems结束*/
+.about{
+    height: 250px;
+    margin-top: 47px;
+    background-color: #ffffff;
+}
+.about .piece{
+    /*display: inline-block;*/
+    width: 30%;
+    height: 250px;
+    float: left;
+    padding: 50px;
+    margin-right: 50px;
+    /*background-color: yellow;*/
+}
+.about .piece:last-child{
+    margin-right: 0;
+}
+.information{
+    font-size: 18px;
+}
+.information p{
+    color: #f18d00;
+    font-size: 20px;
+}
+.phone{
+    color: #999;
+}
+.saomiao{
+    padding: 50px 0!important;
+    text-align: center;
+}
+.saomiao ul{
+    width: 100%;
+}
+.saomiao li{
+    width: 50%;
+    float: left;
+}
+.guanyu{
+    /*padding: 50px 0!important;*/
+    text-align: start;
+}
+.guanyu ul{
+    float: left;
+    height: 175px;
+    display: inline-block;
+    margin-right: 50px;
+}
+.guanyu li{
+    line-height: 45px;
+    font-size: 14px;
+}
+.guanyu li a{
+    color: #727272;
+}
+/*about结束*/
+
+/*底部footer开始*/
+footer{
+    /*width: 1325px;*/
+    height: 35px;
+    line-height: 35px;
+    color: #a4a4a4;
+    margin:0 auto;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/*底部footer结束*/
+
+/*登录模态框开始*/
+.modal-open .login_modal{
+    top: 70px;
+    overflow: visible;
+}
+.login_con{
+    width: 1200px;
+    height: 506px;
+    margin:0 auto;
+}
+.login_content{
+    height: 506px;
+    border-radius: 20px!important;
+    position: relative;
+    background: url("../images/registrat_bgm.jpg") no-repeat;
+}
+button.login_close,.button.login_close:hover,.button.login_close:focus,.button.login_close:active,.button.login_close.active{
+    position: absolute;
+    top: -19px;
+    right: -19px;
+    width: 38px;
+    height: 38px;
+    color: #000;
+    cursor: pointer;
+    z-index: 100;
+    border: 2px solid #000000;
+    border-radius: 50%!important;
+    opacity: 1;
+    background: #ffffff;
+}
+button.login_close span{
+    cursor: pointer;
+}
+.registrat_form_box{
+    width: 320px;
+    height: 430px;
+    float: right;;
+    background-color: #fff;
+    border-radius: 10px!important;
+    padding-top: 10px;
+}
+.registrat_form_box form{
+    width: 260px;
+    height: 200px;
+    margin:0 auto ;
+    color: #c9c9c9;
+}
+.login_title{
+    display: flex;
+    margin-top: 30px;
+}
+.login_title >span{
+    flex:1;
+}
+.hrs{
+    height: 0;
+    margin:auto 0;
+    border: 1px solid #eaeaea;
+}
+.login_title .til{
+    text-align: center;
+    color: #000;
+    flex:2;
+}
+.choose > ul{
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+}
+.choose li{
+    flex: 1;
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+}
+.choose li a{
+    color: #c9c9c9;
+    text-align: center;
+}
+.choose li a{
+    margin:0 auto;
+}
+.choose li a >span{
+    display: inline-block;
+    width: 57px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    /*border-radius: 50%!important;*/
+}
+.choose li:hover a >span{
+    transform: scale(1.05);
+}
+.cgs_logoImg{
+    background: url("../images/caishang_01.png") no-repeat center center;
+}
+.gys_logoImg{
+    background: url("../images/gongyingsahng_01.png") no-repeat center center;
+}
+.jds_logoImg{
+    background: url("../images/jidishang_01.png") no-repeat center center;
+}
+.choose li.active a .cgs_logoImg{
+    background: url("../images/caishang_02.png") no-repeat center center;
+}
+.choose li.active a .gys_logoImg{
+    background: url("../images/gongyingsahng_02.png") no-repeat center center;
+}
+.choose li.active a .jds_logoImg{
+    background: url("../images/jidishang_02.png") no-repeat center center;
+}
+.myIs{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #008842;
+    margin-top: 8px;
+    position: relative;
+    background-color: #f4f4f4;
+}
+.myIs em{
+    position: absolute;
+    top: 32%;
+    right: -4px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #f4f4f4;
+    transform: rotate(45deg);
+}
+.registrat_form_box .form-group{
+    margin-bottom: 20px;
+}
+.registrat_form_box .form-group input{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px!important;
+    background-color: #f4f4f4;
+    border: 1px solid #dddddd;
+}
+.registrat_form_box .form-group input.yanzhengma{
+    width: 150px;
+    height: 40px;
+    float: left;
+    border: 1px solid #dddddd;
+}
+
+.submit_btn{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px!important;
+    border: 1px solid #008842;
+    background-color: #008842;
+}
+.forget_psw_box{
+    padding-top: 5px;
+    overflow: hidden;
+}
+.forget_psw{
+    border-bottom: 1px solid #d0d0d0;
+}
+.account_number{
+    text-align: center;
+    color: #ff7901;
+    font-size: 14px;
+    /*padding-top:15px;*/
+}
+.account_number:hover,.account_number:focus,.account_number:active,.account_number.active{
+    color: #ff7901;
+}
+
+/*登录模态框结束*/
+    .btnStyle,.btnStyle:hover,.btnStyle:focus,.btnStyle:active{
+        width: 130px;
+        height: 34px;
+        margin-right: 20px;
+        color: #10c55b;
+        border:#008842 1px solid;
+        border-radius: 5px!important;
+        background-color: #fff;
+    }
+    .btnStyleSure{
+        color: #fff;
+        background-color: #10c55b;
+    }
+    .xiaoShou{
+        cursor:pointer;
+    }
+    .xiaoShou:hover a{
+        text-decoration:underline;
+    }
+    .input-daterange > .dateInput {
+        background-color: #fff;
+
+    }
+/*vip开始*/
+
+
+
+
+    .vip0{
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        background: url("../images/vip0.png") no-repeat;
+    }
+    .vip2{
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        background: url("../images/vip2.png") no-repeat;
+    }
+    .vip4{
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        background: url("../images/vip4.png") no-repeat;
+    }
+    .vip6{
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        background: url("../images/vip6.png") no-repeat;
+    }
+/*vip结束*/
+    /*backTopBox部分开始*/
+    .backTopBox{
+        color: #fff;
+        position: fixed;
+        bottom: 20%;
+        right: 5%;
+    }
+    .backTopBox a{
+        color: #fff;
+    }
+    .backTopImg{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 13px;
+        position: relative;
+        background-color: #c4c7cd;
+        text-align: center;
+        margin-bottom: 10px;
+        border-radius: 5px!important;
+        opacity: 0.8;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .fcgImgText,.findServerText,.tipsText{
+        width: 50px;
+        height: 50px;
+        background-color: #008842;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        z-index: 1;
+        text-align: center;
+        transition: 1.5s;
+        opacity: 0;
+    }
+    .tipsText{
+        line-height: 25px;
+    }
+    .fcgImg:hover > .fcgImgText{
+        transform: translateX(-50px);
+        opacity: 1;
+        border-top-left-radius: 5px!important;
+        border-bottom-left-radius: 5px!important;
+    }
+    .findServerImg:hover > .findServerText{
+        transform: translateX(-50px);
+        opacity: 1;
+        border-top-left-radius: 5px!important;
+        border-bottom-left-radius: 5px!important;
+    }
+    .tipsImg:hover > .tipsText{
+        transform: translateX(-50px);
+        opacity: 1;
+        border-top-left-radius: 5px!important;
+        border-bottom-left-radius: 5px!important;
+    }
+    .backTopImg:hover{
+        background-color: #008842;
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 0!important;
+        opacity: 1;
+    }
+    /*backTopBox部分结束*/

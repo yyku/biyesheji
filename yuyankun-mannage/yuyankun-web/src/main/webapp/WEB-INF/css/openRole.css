@@ -1,0 +1,78 @@
+.code-box{
+    margin-left: 184px;
+    height: 34px;
+    width: 380px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    background-image: url("../images/yzm.gif");
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+.code-box{
+    position: relative;
+}
+.code-box p,
+.code-box span{
+    display:block;
+    position: absolute;
+    left: 0;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 5px;
+}
+.code-box span{
+    width: 40px;
+    background-color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.code-box p{
+    width: 0;
+    background-color: #FFFF99;
+    overflow: hidden;
+    text-indent: -20px;
+    transition: background 1s ease-in;
+}
+.code-box .code-input{
+    display: none;
+}
+
+.skyblue{
+    color: skyblue;
+}
+
+/*提示模态框开始*/
+.x_huo {
+    text-align: center;
+    font-size: 18px;
+}
+.x_huo i{
+    font-style: normal;
+}
+.x_huo em{
+
+}
+.foterBox{
+    text-align: left;
+    width: 50%;
+    float: right;
+}
+.action,.action:hover,.action:focus,.action:active,.action.active{
+    width: 120px;
+    height: 45px;
+    color: #cfcfcf;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.goAction,.goAction:hover,.goAction:focus,.goAction:active,.goAction.active{
+    width: 120px;
+    height: 45px;
+    color: #fff;
+    background-color: #008842;
+}
+/*提示模态框结束*/
+

@@ -1,0 +1,277 @@
+.path{
+
+}
+.line{
+    position: static;
+    margin:auto;
+    transform: translate(0);
+}
+.path .w{
+    padding: 15px 13px;
+
+    overflow: hidden;
+}
+.path .w li{
+    float: left;
+    font-size: 12px;
+
+}
+.path .w li a{
+    color: #a6a6a6;
+}
+.path .w li:hover a{
+    text-decoration: underline;
+}
+.mian .w{
+    height: 517px;
+    /*overflow: hidden;*/
+}
+.songyang_imgBox{
+    float: left;
+    position: relative;
+}
+.songyang_imgBox::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    top: -5px;
+    left: -5px;
+    background: url(../images/changpinjiance001.png) no-repeat;
+
+}
+.formBox{
+    width: 348px;
+    height: 514px;
+    background: #fff;
+}
+.formBox >form{
+    padding: 42px 44px 25px 0px;
+}
+.formBox >form .col-sm-4,.formBox >form .col-sm-8{
+    padding-left: 0;
+}
+.formBox >form .control-label{
+    text-align: right;
+    margin-top: 7px;
+    color: #92908f;
+}
+.formBox >form  .form-group{
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+.sqBtn,.sqBtn:hover,.sqBtn:focus,.sqBtn:active{
+    width: 100%;
+    color: #fff;
+    background-color: #10c55b;
+    border: 1px solid #008842;
+    font-size: 16px;
+}
+.tipBox{
+    color: #aeaeae;
+}
+.tipBox i{
+    font-style: normal;
+    color: red;
+}
+.tipBox em{
+    color: #10c55b;
+}
+
+/*流程开始*/
+.pro_baoxian_process{
+    /*height: 300px;*/
+    margin-top: 40px;
+
+}
+.pro_baoxian_process .w{
+    background-color: #fff;
+    color: #000000;
+    font-size: 20px;
+    padding-top: 30px;
+    /*height: 300px;*/
+}
+.sample_requirements{
+    padding-top: 20px;
+    /*height: 125px;*/
+}
+.sample_requirements_tit{
+    width: 210px;
+    margin-left:50%;
+    transform: translate(-50%);
+    display: flex;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.sample_requirements_tit span{
+    flex: 1;
+}
+.sample_requirements_tit span.con{
+    flex:3;
+    text-align: center;
+}
+.lines{
+    border: 1px solid #000;
+    margin: auto 0;
+    height: 0;
+}
+.sample_img{
+    padding: 0 170px;
+}
+
+.sample_liucheng {
+    padding-bottom: 50px;
+    margin:0 auto;
+}
+.liucheng{
+    /*overflow: hidden;*/
+}
+.liucheng ul{
+    padding-left: 170px;
+    padding-right: 170px;
+    height: 180px;
+    text-align: center;
+    /*overflow: hidden;*/
+}
+.liucheng li{
+    margin-right: 1px;
+    display: inline-block;
+}
+.liucheng li:last-child{
+    margin-right: 0;
+}
+.stander{
+    position: relative;
+
+}
+.litTipBox{
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    /*width: 270px;*/
+    height: 85px;
+     display: none;
+    overflow: hidden;
+}
+.litTip{
+    padding: 6px ;
+    text-indent: 10px;
+    width: 205px;
+    font-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 10px!important;
+    border: 1px solid #dcdcdc ;
+}
+.fwrx{
+    width: 165px;
+    padding: 20px 10px;
+}
+.songyangBox{
+    top: -56px;
+}
+.songyang{
+    width: 385px;
+    text-align: left;
+}
+.qianyueBox{
+    text-align: left;
+    top: -56px;
+}
+.qianyue{
+    width: 227px;
+    padding: 16px 10px;
+}
+.jingpingBox{
+    text-align: left;
+    top: 85px;
+    z-index: 2;
+}
+.jingping{
+    width: 232px;
+    padding: 13px 10px;
+}
+.tipArr{
+    position: absolute;
+    top: 53px;
+    left: 0;
+    z-index: 2;
+}
+.tipArr1{
+    position: absolute;
+    top: 53px;
+    left: 0;
+    z-index: 2;
+}
+.tipArr2{
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 2;
+}
+.tipArr4{
+    position: absolute;
+    top: -17px;
+    left: 0;
+    z-index: 2;
+}
+.stander:hover .litTipBox{
+    display: block;
+}
+.rexian{
+    padding: 35px 0 50px;
+    text-align: center  ;
+}
+.jc_liucheng{
+    text-align: center;
+}
+
+.form-control{
+    border-radius: 4px!important;
+}
+
+.sqBtn,.sqBtn:hover,.sqBtn:focus,.sqBtn:active{
+    border-radius: 4px!important;
+}
+
+.must_write{
+    color: red;
+}
+/*流程结束*/
+
+/*成功模态框开始*/
+.chenggong{
+    width: 600px;
+}
+.chenggong >.modal-dialog{
+    margin:0;
+}
+.m-header {
+    margin-bottom: 0 !important;
+}
+button.modalBtn,button.modalBtn:hover,button.modalBtn:focus,button.modalBtn:active{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50% !important;
+    text-align: center;
+    color: #fff;
+    text-indent: 0px;
+    background-image: none!important;
+    background-color: #000!important;
+}
+.m-body {
+    text-align: center;
+}
+.foter {
+    margin-top: 0;
+    text-align: center;
+}
+.sureBtn,.sureBtn:hover,.sureBtn:active,.sureBtn.active{
+     width: 160px;
+     height: 45px;
+     color: #fff;
+     background-color: #008842;
+ }
+/*成功模态框结束*/

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yukun.mapper.LdwBasketLeaseMapper" >
+  <resultMap id="BaseResultMap" type="com.yukun.pojo.LdwBasketLease" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="customer_id" property="customerId" jdbcType="BIGINT" />
+    <result column="customer_account" property="customerAccount" jdbcType="VARCHAR" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" />
+    <result column="operation_type" property="operationType" jdbcType="VARCHAR" />
+    <result column="basket_count" property="basketCount" jdbcType="INTEGER" />
+    <result column="deposit_total" property="depositTotal" jdbcType="DECIMAL" />
+    <result column="rent_total" property="rentTotal" jdbcType="DECIMAL" />
+    <result column="pay_method" property="payMethod" jdbcType="INTEGER" />
+    <result column="is_pay_money" property="isPayMoney" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
+    <result column="update_user_id" property="updateUserId" jdbcType="BIGINT" />
+    <result column="update_user_name" property="updateUserName" jdbcType="VARCHAR" />
+    <result column="lease_operation_center_id" property="leaseOperationCenterId" jdbcType="BIGINT" />
+    <result column="lease_operation_center_name" property="leaseOperationCenterName" jdbcType="VARCHAR" />
+    <result column="is_delete" property="isDelete" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, customer_id, customer_account, customer_name, operation_type, basket_count, deposit_total, 
+    rent_total, pay_method, is_pay_money, status, create_date, update_date, create_user_id, 
+    update_user_id, update_user_name, lease_operation_center_id, lease_operation_center_name, 
+    is_delete
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yukun.pojo.LdwBasketLeaseExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ldw_basket_lease
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from ldw_basket_lease
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from ldw_basket_lease
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yukun.pojo.LdwBasketLeaseExample" >
+    delete from ldw_basket_lease
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yukun.pojo.LdwBasketLease" >
+    insert into ldw_basket_lease (id, customer_id, customer_account, 
+      customer_name, operation_type, basket_count, 
+      deposit_total, rent_total, pay_method, 
+      is_pay_money, status, create_date, 
+      update_date, create_user_id, update_user_id, 
+      update_user_name, lease_operation_center_id, 
+      lease_operation_center_name, is_delete)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{customerAccount,jdbcType=VARCHAR}, 
+      #{customerName,jdbcType=VARCHAR}, #{operationType,jdbcType=VARCHAR}, #{basketCount,jdbcType=INTEGER}, 
+      #{depositTotal,jdbcType=DECIMAL}, #{rentTotal,jdbcType=DECIMAL}, #{payMethod,jdbcType=INTEGER}, 
+      #{isPayMoney,jdbcType=TINYINT}, #{status,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{updateDate,jdbcType=TIMESTAMP}, #{createUserId,jdbcType=BIGINT}, #{updateUserId,jdbcType=BIGINT}, 
+      #{updateUserName,jdbcType=VARCHAR}, #{leaseOperationCenterId,jdbcType=BIGINT}, 
+      #{leaseOperationCenterName,jdbcType=VARCHAR}, #{isDelete,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yukun.pojo.LdwBasketLease" >
+    insert into ldw_basket_lease
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="customerId != null" >
+        customer_id,
+      </if>
+      <if test="customerAccount != null" >
+        customer_account,
+      </if>
+      <if test="customerName != null" >
+        customer_name,
+      </if>
+      <if test="operationType != null" >
+        operation_type,
+      </if>
+      <if test="basketCount != null" >
+        basket_count,
+      </if>
+      <if test="depositTotal != null" >
+        deposit_total,
+      </if>
+      <if test="rentTotal != null" >
+        rent_total,
+      </if>
+      <if test="payMethod != null" >
+        pay_method,
+      </if>
+      <if test="isPayMoney != null" >
+        is_pay_money,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
+      <if test="createUserId != null" >
+        create_user_id,
+      </if>
+      <if test="updateUserId != null" >
+        update_user_id,
+      </if>
+      <if test="updateUserName != null" >
+        update_user_name,
+      </if>
+      <if test="leaseOperationCenterId != null" >
+        lease_operation_center_id,
+      </if>
+      <if test="leaseOperationCenterName != null" >
+        lease_operation_center_name,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="customerAccount != null" >
+        #{customerAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null" >
+        #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="operationType != null" >
+        #{operationType,jdbcType=VARCHAR},
+      </if>
+      <if test="basketCount != null" >
+        #{basketCount,jdbcType=INTEGER},
+      </if>
+      <if test="depositTotal != null" >
+        #{depositTotal,jdbcType=DECIMAL},
+      </if>
+      <if test="rentTotal != null" >
+        #{rentTotal,jdbcType=DECIMAL},
+      </if>
+      <if test="payMethod != null" >
+        #{payMethod,jdbcType=INTEGER},
+      </if>
+      <if test="isPayMoney != null" >
+        #{isPayMoney,jdbcType=TINYINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null" >
+        #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserName != null" >
+        #{updateUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="leaseOperationCenterId != null" >
+        #{leaseOperationCenterId,jdbcType=BIGINT},
+      </if>
+      <if test="leaseOperationCenterName != null" >
+        #{leaseOperationCenterName,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yukun.pojo.LdwBasketLeaseExample" resultType="java.lang.Integer" >
+    select count(*) from ldw_basket_lease
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ldw_basket_lease
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null" >
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerAccount != null" >
+        customer_account = #{record.customerAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerName != null" >
+        customer_name = #{record.customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operationType != null" >
+        operation_type = #{record.operationType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basketCount != null" >
+        basket_count = #{record.basketCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.depositTotal != null" >
+        deposit_total = #{record.depositTotal,jdbcType=DECIMAL},
+      </if>
+      <if test="record.rentTotal != null" >
+        rent_total = #{record.rentTotal,jdbcType=DECIMAL},
+      </if>
+      <if test="record.payMethod != null" >
+        pay_method = #{record.payMethod,jdbcType=INTEGER},
+      </if>
+      <if test="record.isPayMoney != null" >
+        is_pay_money = #{record.isPayMoney,jdbcType=TINYINT},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.createDate != null" >
+        create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateDate != null" >
+        update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createUserId != null" >
+        create_user_id = #{record.createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.updateUserId != null" >
+        update_user_id = #{record.updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.updateUserName != null" >
+        update_user_name = #{record.updateUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.leaseOperationCenterId != null" >
+        lease_operation_center_id = #{record.leaseOperationCenterId,jdbcType=BIGINT},
+      </if>
+      <if test="record.leaseOperationCenterName != null" >
+        lease_operation_center_name = #{record.leaseOperationCenterName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isDelete != null" >
+        is_delete = #{record.isDelete,jdbcType=TINYINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ldw_basket_lease
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      customer_account = #{record.customerAccount,jdbcType=VARCHAR},
+      customer_name = #{record.customerName,jdbcType=VARCHAR},
+      operation_type = #{record.operationType,jdbcType=VARCHAR},
+      basket_count = #{record.basketCount,jdbcType=INTEGER},
+      deposit_total = #{record.depositTotal,jdbcType=DECIMAL},
+      rent_total = #{record.rentTotal,jdbcType=DECIMAL},
+      pay_method = #{record.payMethod,jdbcType=INTEGER},
+      is_pay_money = #{record.isPayMoney,jdbcType=TINYINT},
+      status = #{record.status,jdbcType=INTEGER},
+      create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      create_user_id = #{record.createUserId,jdbcType=BIGINT},
+      update_user_id = #{record.updateUserId,jdbcType=BIGINT},
+      update_user_name = #{record.updateUserName,jdbcType=VARCHAR},
+      lease_operation_center_id = #{record.leaseOperationCenterId,jdbcType=BIGINT},
+      lease_operation_center_name = #{record.leaseOperationCenterName,jdbcType=VARCHAR},
+      is_delete = #{record.isDelete,jdbcType=TINYINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yukun.pojo.LdwBasketLease" >
+    update ldw_basket_lease
+    <set >
+      <if test="customerId != null" >
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="customerAccount != null" >
+        customer_account = #{customerAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null" >
+        customer_name = #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="operationType != null" >
+        operation_type = #{operationType,jdbcType=VARCHAR},
+      </if>
+      <if test="basketCount != null" >
+        basket_count = #{basketCount,jdbcType=INTEGER},
+      </if>
+      <if test="depositTotal != null" >
+        deposit_total = #{depositTotal,jdbcType=DECIMAL},
+      </if>
+      <if test="rentTotal != null" >
+        rent_total = #{rentTotal,jdbcType=DECIMAL},
+      </if>
+      <if test="payMethod != null" >
+        pay_method = #{payMethod,jdbcType=INTEGER},
+      </if>
+      <if test="isPayMoney != null" >
+        is_pay_money = #{isPayMoney,jdbcType=TINYINT},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null" >
+        create_user_id = #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null" >
+        update_user_id = #{updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserName != null" >
+        update_user_name = #{updateUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="leaseOperationCenterId != null" >
+        lease_operation_center_id = #{leaseOperationCenterId,jdbcType=BIGINT},
+      </if>
+      <if test="leaseOperationCenterName != null" >
+        lease_operation_center_name = #{leaseOperationCenterName,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yukun.pojo.LdwBasketLease" >
+    update ldw_basket_lease
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      customer_account = #{customerAccount,jdbcType=VARCHAR},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      operation_type = #{operationType,jdbcType=VARCHAR},
+      basket_count = #{basketCount,jdbcType=INTEGER},
+      deposit_total = #{depositTotal,jdbcType=DECIMAL},
+      rent_total = #{rentTotal,jdbcType=DECIMAL},
+      pay_method = #{payMethod,jdbcType=INTEGER},
+      is_pay_money = #{isPayMoney,jdbcType=TINYINT},
+      status = #{status,jdbcType=INTEGER},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      create_user_id = #{createUserId,jdbcType=BIGINT},
+      update_user_id = #{updateUserId,jdbcType=BIGINT},
+      update_user_name = #{updateUserName,jdbcType=VARCHAR},
+      lease_operation_center_id = #{leaseOperationCenterId,jdbcType=BIGINT},
+      lease_operation_center_name = #{leaseOperationCenterName,jdbcType=VARCHAR},
+      is_delete = #{isDelete,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

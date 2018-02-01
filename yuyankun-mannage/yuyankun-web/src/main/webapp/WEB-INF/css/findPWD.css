@@ -1,0 +1,193 @@
+body{
+    background-color: #ffffff;
+}
+.logo_tit_lk{
+    float: left;
+}
+.find-logo{
+    display: inline-block;
+    float: left;
+    margin-left: 18px;
+    height: 60px;
+    /*font-family:'华文细黑';*/
+    margin-top: 20px;
+    line-height: 50px;
+    padding-left: 25px;
+    color: #262626;
+    border-left: 2px solid #d5d9e1;
+}
+.main{
+    /*height: 300px;*/
+    /*background-color: yellow;*/
+    border-top: 1px solid #f3f3f3;
+}
+.contents-img{
+    width: 994px;
+    /*height: 300px;*/
+    margin: 40px auto;
+}
+.contents{
+    width: 434px;
+    /*height: 300px;*/
+    margin:0 auto;
+    /*background-color: yellow;*/
+}
+.choose > ul{
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+}
+.choose li{
+    flex: 1;
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+}
+.choose li a{
+    color: #c9c9c9;
+    text-align: center;
+}
+.choose li a{
+    margin:0 auto;
+}
+.choose li a >span{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%!important;
+}
+.cgs_logoImg{
+    background: url("../images/caishang_01.png") no-repeat;
+}
+.gys_logoImg{
+    background: url("../images/gongyingsahng_01.png") no-repeat;
+}
+.jds_logoImg{
+    background: url("../images/jidishang_01.png") no-repeat;
+}
+.choose li.active a .cgs_logoImg{
+    background: url("../images/caishang_02.png") no-repeat;
+}
+.choose li.active a .gys_logoImg{
+    background: url("../images/gongyingsahng_02.png") no-repeat;
+}
+.choose li.active a .jds_logoImg{
+    background: url("../images/jidishang_02.png") no-repeat;
+}
+.myIs{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #008842;
+    margin-top: 8px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-75%);
+    background-color: #f4f4f4;
+}
+.myIs em{
+    position: absolute;
+    top: 32%;
+    right: -4px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #f4f4f4;
+    transform: rotate(45deg);
+}
+.yzm_box{
+    overflow: hidden;
+}
+.contents .form-group{
+    margin-bottom: 30px;
+}
+.contents .form-group input{
+    width: 100%;
+    height: 55px;
+    border-radius: 4px!important;
+    background-color: #f4f4f4;
+    border: 1px solid #dddddd;
+}
+.contents .form-group input.yanzhengma{
+    width: 250px;
+    height: 55px;
+    float: left;
+    border: 1px solid #dddddd;
+}
+
+.get_yzma{
+    width: 168px;
+    height: 55px;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px!important;
+    border: 1px solid #ff9b0d;
+    margin-left: 10px;
+    background-color: #ff9b0d;
+
+}
+.submit_btn{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px!important;
+    border: 1px solid #008842;
+    background-color: #008842;
+}
+/*s设置密码开始*/
+.setpwd-form .form-group{
+    height: 55px;
+    line-height: 55px;
+    margin-bottom: 30px;
+    font-size: 20px;
+
+}
+.setpwd-form .form-group input{
+    font-size: 18px;
+}
+.setpwd-form .form-group label{
+    padding-left: 0;
+    font-weight: 400;
+}
+.account{
+    color: #008842;
+}
+/*s设置密码结束*/
+/*s找回密码完成  开始*/
+.content-body{
+    width: 510px;
+    /*height: 300px;*/
+    margin:0 auto;
+    /*background-color: yellow;*/
+}
+.congratulations{
+    text-align: center;
+    font-size: 24px;
+    padding: 40px 0;
+}
+.login-lk-box{
+    font-size: 18px;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+.login-lk-box p{
+    padding: 6px 10px;
+}
+
+.loginId{
+    color: #008842;
+}
+.login-lk,.login-lk:hover{
+    color: #008842;
+    padding: 6px 10px;
+    text-align: center;
+    border: 1px solid #bec5d0;
+    border-radius: 7px!important;
+}
+/*s找回密码完成  结束*/
+

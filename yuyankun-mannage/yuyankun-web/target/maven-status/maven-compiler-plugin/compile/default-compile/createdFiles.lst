@@ -1,0 +1,6 @@
+com\yukun\controller\RegisteredController.class
+com\yukun\controller\IndexController.class
+com\yukun\controller\productManage.class
+com\yukun\controller\HomePageDisplay.class
+com\yukun\controller\PictureController.class
+com\yukun\controller\AddGoodsController.class

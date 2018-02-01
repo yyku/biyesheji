@@ -1,0 +1,335 @@
+/*path开始*/
+.path .w{
+    padding: 12px;
+    overflow: hidden;
+}
+.line{
+    position: static;
+    margin:auto;
+    transform: translate(0);
+}
+.path ul li a{
+    float: left;
+    font-size: 14px;
+    color: #acacac;
+}
+.path ul li:hover a{
+    text-decoration: underline;
+}
+/*path结束 */
+/*details详情开始*/
+.details .w{
+    /*min-height: 500px;*/
+    overflow: hidden;
+    background-color: #fff;
+}
+.detail-title{
+    overflow: hidden;
+    border: #eeeeee solid 1px;
+    background-color: #f6f6f6;
+}
+.detail-box{
+
+}
+.detail-title h4{
+    padding-left: 12px;
+    color: #008842;
+}
+.detail-body{
+    font-size: 14px;
+    overflow: hidden;
+}
+.detail-body h3{
+    margin-left: 30px;
+    color: #008842;
+}
+.detail-body h3::before{
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    background-color: #008842;
+}
+.pro-table{
+    padding: 45px;
+    /*font-weight: 700;*/
+}
+.pro-table > table {
+    width: 100%;
+}
+.pro-table > table td{
+    width: 33.33%;
+  line-height: 45px;
+}
+.pro-table > table td span{
+    color: #888685;
+}
+
+.more{
+    padding:0 50px;
+    position: relative;
+}
+.pro-img{
+    overflow: hidden;
+    padding-bottom: 35px;
+    display: none;
+}
+.pro-img h3{
+    color: #2690ff;
+    margin-bottom: 38px;
+}
+.pro-img h3::before{
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 22px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    background-color: #0086ff;
+
+}
+
+.pro-img ul li{
+    width: 177px;
+    height: 176px;
+    float: left;
+    margin-right: 35px;
+}
+.pro-img ul li:first-child{
+    margin-left: 15px;
+}
+.more span{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e9e9e9;
+}
+.link-down{
+    display: block;
+    width: 97px;
+    height: 25px;
+    font-size: 15px;
+    /*text-align: center;*/
+    text-indent: 8px;
+    line-height: 25px;
+    position: absolute;
+    top: -12.5px;
+    right: 110px;
+    color: #888685;
+    border-radius: 22.5px!important;
+    background-color: #e9e9e9;
+}
+.link-down::after{
+    display: inline-block;
+    content: '';
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    background: url("../images/more_img.png") no-repeat;
+}
+.link-up{
+    display: none;
+    width: 97px;
+    height: 25px;
+    font-size: 15px;
+    text-indent: 25px;
+    line-height: 25px;
+    position: absolute;
+    top: 315.5px;
+    right: 110px;
+    color: #888685;
+    border-radius: 22.5px!important;
+    background-color: #e9e9e9;
+}
+.link-up::after{
+    display: inline-block;
+    content: '';
+    width: 17px;
+    height: 17px;
+    vertical-align: text-top;
+    margin-left: 5px;
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    background: url("../images/pro_up.png") no-repeat;
+}
+
+.baojia-list{
+    padding: 30px 50px;
+}
+.baojia-list h3{
+    color: #f18d00;
+    margin-bottom: 38px;
+}
+.baojia-list h3::before{
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 22px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    background-color: #f18d00;
+    
+}
+
+
+
+.item-list{
+    width: 525px;
+    height: 158px;
+    float: left;
+    /*position: relative;*/
+    margin-right: 35px;
+    margin-bottom: 33px;
+    padding: 12px 15px 10px 20px;
+    border:#e5e5e5 solid 1px;
+}
+.item-list:nth-child(even){
+    margin-right: 0;
+}
+.media:first-child{
+    margin-top: 15px;
+}
+.media-body{
+    position: relative;
+    height: 94px;
+    padding-bottom: 30px;
+}
+.price{
+    display: inline-block;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%!important;
+    background-color: #f3f3f3;
+    color: #ff1c5e;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 30px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.jiage{
+    font-size: 20px;
+}
+.person{
+    display: inline-block;
+    color: #c0c0c0;
+    font-size: 13px;
+}
+.person span {
+    margin-right: 20px;
+}
+.company{
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+.renzheng{
+    display: inline-block;
+    margin-top: 20px;
+}
+.renzheng span{
+    margin-right: 10px;
+    font-size: 16px;
+}
+.shiming:before{
+    display: inline-block;
+    content: '';
+    width: 19px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url("../images/shi.png") no-repeat;
+}
+.qiye::before{
+    display: inline-block;
+    content: '';
+    width: 19px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url("../images/qi.png") no-repeat;
+}
+.pinzhi::before{
+    display: inline-block;
+    content: '';
+    width: 19px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url("../images/chan.png") no-repeat;
+}
+
+.media-footer{
+    height: 48px;
+    border-top:#f3f3f3 solid 1px;
+    /*background-color: yellow;*/
+}
+.btn-box{
+    /*padding: 10px 20px 10px 0px;*/
+    float: right;
+    height: 48px;
+    margin-top: 10px;
+}
+.btn-box a{
+    /*float: right;*/
+    margin-left: 20px;
+}
+
+.buheshi, .buheshi:hover, .buheshi:focus{
+    color: #fff;
+    background-color: #c3cbd9;
+    display: block;
+    width: 95px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px!important;
+    font-size: 16px;
+    text-decoration: none;
+}
+.buheshi.hui{
+    display: block;
+    width: 95px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px!important;
+    font-size: 16px;
+    text-decoration: none;
+    color: #c3cbd9;
+    border: 1px solid #c3cbd9;
+    background-color: #fff;
+}
+.chakanbaojia, .chakanbaojia:hover, .chakanbaojia:focus{
+    display: block;
+    width: 95px;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px!important;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #f18d00;
+}
+.fabu, .fabu:hover, .fabu:focus{
+    display: block;
+    width: 95px;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px!important;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #ff552e;
+}
+/*details详情结束*/

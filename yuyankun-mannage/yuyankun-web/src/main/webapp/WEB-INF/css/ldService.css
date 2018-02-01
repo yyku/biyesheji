@@ -1,0 +1,188 @@
+
+/*header开始*/
+/*serviceBgm开始*/
+.serviceBgm{
+    width: 1325px;
+    margin:auto;
+}
+
+/*serviceBgm结束*/
+/*ser-list开始*/
+.ser-list{
+    margin-top: 65px;
+}
+.ser-list .w{
+    /*height: 500px;*/
+    padding:0 67px;
+}
+.ser-list-box{
+    overflow: hidden;
+}
+
+.ser-list-box ul li{
+    float: left;
+    margin-right: 62px;
+    margin-bottom: 45px;
+}
+.ser-list-box ul li:nth-child(even){
+    margin-right: 0;
+}
+.ser-img-box{
+    background-color:#5e5e5e;
+    color: #fff;
+    position: relative;
+}
+.ser-img-box img{
+    opacity: 0.4;
+}
+.ser-img-box img:hover{
+    opacity: 1;
+}
+.ser-img-box em{
+    font-size: 26px;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+.ser-img-box span{
+    display: block;
+    font-size: 36px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.bj-box{
+    height: 115px;
+    line-height: 50px;
+    padding: 25px 25px 40px;
+    /*border-top: 1px solid #f4f4f4;*/
+    background-color: #fff;
+}
+.person-img-box{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 33px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%!important;
+}
+.person-img-box img{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%!important;
+    border: 2px solid #ffffff;
+}
+
+.bj-num{
+    font-size: 16px;
+    color: #d7d7d7;
+}
+.second-tou,.thrid-tou{
+    margin-left: -18px;
+}
+.chakanbaojia, .chakanbaojia:hover, .chakanbaojia:focus{
+    display: block;
+    width: 145px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: auto;
+    border-radius: 25px!important;
+    font-size: 21px;
+    text-decoration: none;
+    background-color: #008842;
+}
+/*ser-list结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*about开始*/
+.about{
+
+    height: 250px;
+}
+.about .piece{
+    /*display: inline-block;*/
+    width: 30%;
+    height: 250px;
+    float: left;
+    padding: 50px;
+    margin-right: 50px;
+    /*background-color: yellow;*/
+}
+.about .piece:last-child{
+    margin-right: 0;
+}
+.information{
+    font-size: 18px;
+}
+.information p{
+    color: #f18d00;
+    font-size: 20px;
+}
+.phone{
+    color: #999;
+}
+.saomiao{
+    padding: 50px 0!important;
+    text-align: center;
+}
+.saomiao ul{
+    width: 100%;
+}
+.saomiao li{
+    width: 50%;
+    float: left;
+}
+.guanyu{
+    /*padding: 50px 0!important;*/
+    text-align: start;
+}
+.guanyu ul{
+    float: left;
+    height: 175px;
+    display: inline-block;
+    margin-right: 50px;
+}
+.guanyu li{
+    line-height: 45px;
+    font-size: 14px;
+}
+.guanyu li a{
+    color: #727272;
+}
+/*about结束*/
+
+/*底部footer开始*/
+footer{
+    width: 1325px;
+    height: 35px;
+    line-height: 35px;
+    color: #a4a4a4;
+    margin:0 auto;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/*底部footer结束*/

@@ -1,0 +1,4 @@
+com\yukun\service\RegisteredService.class
+com\yukun\service\addProductService.class
+com\yukun\service\ProductManageService.class
+com\yukun\service\findSixProduct.class

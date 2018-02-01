@@ -1,0 +1,296 @@
+/*path开始*/
+.path .w{
+    padding: 12px;
+    overflow: hidden;
+}
+.line{
+    position: static;
+    margin:auto;
+    transform: translate(0);
+}
+.path ul li{
+    float: left;
+    font-size: 14px;
+}
+.path ul li a{
+    color: #acacac;
+}
+.path ul li:hover a{
+    text-decoration: underline;
+}
+/*path结束 */
+/*details详情开始*/
+.details .w{
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.details_head{
+    padding: 33px 25px;
+    font-weight: 700;
+    overflow: hidden;
+}
+.details_head_leftBox{
+    position: relative;
+}
+.perspn_tit{
+    height: 5px;
+    background-color: #64b58b;
+}
+.main_media{
+    margin-top: 25px;
+}
+.head_box{
+    display: block;
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+    padding: 5px;
+    text-align: center;
+    border: 3px solid #e5e5e5;
+    border-radius: 50% !important;
+}
+.person_status{
+    position: absolute;
+    top: 12px;
+    right: -19px;
+}
+.body_box{
+    padding-left: 70px;
+    padding-top: 40px;
+}
+.qbj_person{
+    width: 100%;
+    font-size: 18px;
+    /*border: 1px solid #000;*/
+}
+.qbj_person tr{
+    line-height: 45px;
+}
+.qbj_phone::before{
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url("../images/person_phone.png");
+}
+.qbj_name::before{
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 19px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url("../images/person_header.png");
+}
+.cg_status_td{
+    text-align: right;
+}
+.cg_status{
+    padding: 8px 22px;
+    font-size: 26px;
+    margin-right: 70px;
+    color: #8ce78e;
+    border-radius: 26px!important;
+    background-color: #4dbb5f;
+    border: 2px solid #39954f;
+}
+.qbj_times{
+    padding-right: 70px;
+    text-align: right;
+    color: #9f9f9f;
+}
+
+
+
+
+
+
+.detail-title{
+    overflow: hidden;
+    border: #eeeeee solid 1px;
+    background-color: #f6f6f6;
+}
+.detail-box{
+
+}
+.detail-title h4{
+    padding-left: 12px;
+    color: #008842;
+}
+.detail-body{
+    font-size: 14px;
+    overflow: hidden;
+}
+.detail-body h3{
+    margin-left: 30px;
+    color: #008842;
+}
+.detail-body h3::before{
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    background-color: #008842;
+}
+.pro-table{
+    padding: 45px;
+    /*font-weight: 700;*/
+}
+.pro-table > table {
+    width: 100%;
+}
+.pro-table > table td{
+    width: 33.33%;
+    line-height: 45px;
+}
+.pro-table > table td span{
+    color: #888685;
+}
+.more{
+    padding:0 30px;
+    position: relative;
+}
+.pro-imgs{
+    overflow: hidden;
+    padding-bottom: 35px;
+    /*display: none;*/
+    border-bottom: 1px solid #e9e9e9;
+}
+.pro-imgs h3{
+    color: #2690ff;
+    margin-bottom: 38px;
+}
+.pro-imgs h3::before{
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 22px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    background-color: #0086ff;
+}
+.pro-img ul li{
+    width: 177px;
+    height: 176px;
+    float: left;
+    margin-right: 35px;
+}
+.pro-img ul li:first-child{
+    margin-left: 15px;
+}
+/*details详情结束*/
+/*bj-form 报价填表开始*/
+.bjDetail-form-box {
+    min-height: 500px;
+}
+.bjDetail_form{
+    width: 620px;
+    padding-top: 50px;
+    padding-left: 130px;
+    overflow: hidden;
+}
+
+.bjDetail_form > .form-group {
+    margin-bottom: 34px;
+    overflow: hidden;
+}
+.bjDetail_form > .form-group p{
+    /*text-align: right;*/
+    font-size: 14px;
+    color: #000;
+}
+.chose_product{
+    width: 100%;
+    height: 34px;
+}
+.bjDetail_form > .form-group.bjDetail_ensure_box{
+    text-align: left;
+}
+.goBack,.goBack:hover,.goBack:focus,.goBack:active,.goBack.active{
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 110px;
+    border: 1px solid #008842;
+    background-color: #10c55b;
+}
+.per_input{
+    border-right:none;
+}
+.per_prices{
+    z-index:100;
+    padding-right: 65px;
+    border-left:none;
+    border-right:none;
+    background-color: #fff;
+}
+.sel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 34px;
+
+}
+
+
+
+
+
+
+
+
+
+/*bj-form 报价填表结束*/
+/*modal 模态框开始*/
+.bj_modal,.bj_nomessage{
+    top: 180px;
+}
+.bj_modal .closed,.bj_nomessage .closed{
+    display: block;
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50% !important;
+    background: #000;
+}
+.bj_modal .m-header,.bj_nomessage .m-header{
+    border-bottom:none;
+}
+.bj_modal .m-body,.bj_nomessage .m-body{
+    font-size: 16px;
+    text-align: center;
+}
+.bj_modal .m-body p,.bj_nomessage .m-body p{
+    margin-top: 25px;
+}
+.bj_modal .foter,.bj_nomessage .foter{
+    text-align: center;
+    border-top:none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.bj_modal .foter button, .bj_nomessage .foter button{
+    width: 158px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #008842;
+    border-radius: 5px!important;
+    background-color: #008842;
+}
+.bj_modal .foter .my_price,.bj_nomessage .foter  .giveup_bj{
+    color: #aaaaaa;
+    border: 1px solid #d8d8d8;
+    background-color: #fff;
+}
+/*modal 模态框结束*/
